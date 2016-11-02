@@ -4,7 +4,7 @@ Dockerfile for TestFairy Connect
 ## Requirements:
 - TestFairy account
 - Docker installed
-- One of the issue tracking systems supported by TestFairy Connect [https://docs.testfairy.com/TestFairy_Connect/Overview.html]
+- One of the issue tracking systems supported by TestFairy Connect https://docs.testfairy.com/TestFairy_Connect/Overview.html
 
 ## In order to run TestFairy Connect in docker
 
