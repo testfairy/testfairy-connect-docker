@@ -8,8 +8,8 @@ WORKDIR /usr/src/testfairy-connect
 RUN touch configure && \
     chmod u+x configure && \
     echo "#!/bin/bash" >> configure && \
-    echo "node service-configure.js -f /etc/testfairyconnect/config.json" >> configure
+    echo "node service-configure.js -f /etc/testfairy-connect/config.json " >> configure
 
 ENV PATH /usr/src/testfairy-connect:$PATH
 
-CMD ["node", "service-run.js", "-f", "/etc/testfairyconnect/config.json"]
+CMD ["node", "service-run.js", "-f", "/etc/testfairy-connect/config.json"]
