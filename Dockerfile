@@ -1,15 +1,14 @@
-FROM node:argon
+FROM node:8.6.0
 
-RUN mkdir /usr/src/testfairy-connect && \
-	curl -SL https://github.com/testfairy/testfairy-connect/releases/download/1.6.0/testfairy-connect.tgz | tar -xzC /usr/src/testfairy-connect
+RUN \
+	echo yo && \
+	mkdir /usr/src/testfairy-connect && \
+	cd /usr/src/testfairy-connect && \
+	npm install git+https://github.com/testfairy/testfairy-connect.git
 
 WORKDIR /usr/src/testfairy-connect
 
-RUN touch configure && \
-    chmod u+x configure && \
-    echo "#!/bin/bash" >> configure && \
-    echo "node service-configure.js -f /etc/testfairy-connect/config.json " >> configure
-
 ENV PATH /usr/src/testfairy-connect:$PATH
 
-CMD ["node", "service-run.js", "-f", "/etc/testfairy-connect/config.json"]
+ENTRYPOINT ["node", "node_modules/testfairy-connect/service.js"]
+
