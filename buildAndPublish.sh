@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Decide name and version
-VERSION=$TRAVIS_TAG
+VERSION=${TRAVIS_TAG:-"test"}
 NAME="testfairy/testfairy-connect"
 TAG="${NAME}:${VERSION}"
 
