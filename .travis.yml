@@ -6,12 +6,10 @@ env:
   # Docker hub crendentials ($DOCKER_USERNAME, $DOCKER_PASSWORD)
   - secure: XXXXXXXXX
 
-sudo: true
-
 before_install:
-  - apt-get update
-  - apt-get install -y jq
-  - apt-get install -y curl
+  - sudo apt-get update
+  - sudo apt-get install -y jq
+  - sudo apt-get install -y curl
 
 install:
   - git clone https://github.com/docker-library/official-images.git ~/official-images
