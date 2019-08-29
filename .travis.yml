@@ -1,0 +1,18 @@
+dist: xenial
+language: bash
+services: docker
+
+env:
+  # Docker hub crendentials ($DOCKER_USERNAME, $DOCKER_PASSWORD)
+  - secure: XXXXXXXXX
+
+sudo: true
+
+install:
+  - git clone https://github.com/docker-library/official-images.git ~/official-images
+  - apt-get update
+  - apt-get install jq
+  - apt-get install curl
+
+script:
+  - "./buildAndPublish.sh"
