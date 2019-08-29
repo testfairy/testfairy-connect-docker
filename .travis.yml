@@ -11,8 +11,5 @@ before_install:
   - sudo apt-get install -y jq
   - sudo apt-get install -y curl
 
-install:
-  - git clone https://github.com/docker-library/official-images.git ~/official-images
-
 script:
   - "./buildAndPublish.sh"
