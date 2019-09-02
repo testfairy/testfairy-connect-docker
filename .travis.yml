@@ -3,7 +3,7 @@ language: bash
 services: docker
 
 env:
-  # Docker hub crendentials ($DOCKER_USERNAME, $DOCKER_PASSWORD)
+  - secure: "GhnHDaa0+PsVCZ7EaySSc1tYBV3CCO9ZFM+O8e1nY/cFUWGt1xXl4Pfy3uPoukNm08/LrJA2ud03prLufPr1+QszNecPo0uNXlI07VOXP5HcLfLLvG0+sbMWWjITk3BQCGuSa8biiZvGv3Y3lp/A1aKVTmYx+BCMevy1up9kPm4cYSo+87XiI/3Ve1WnLSR1o7ThlA6vzd6ERUACoSnNXJ/O6O3Yo/QyK19XOKb9Me/MoAgrTtme0P7s6yHoja2ed/xdbmc1+g8wkIVJJTl4sA1lyCIkwZo5QWUX/a3fOKetAtprp6oUMlgt2ZgtWiqjaUT2WjaNBzg0MPue59caUGaVW8JSWSvxtAz3xrVFY9f8WCgaHonMmlZfNoNLtfyJnp9mzWK1pTzkWITI8z8rLlUIPquzfDeKo1X1wJt9twyj1Wq7xe01aiHF+CzktctR84bgKUxeuy2tqmZoXhc0X2a+pxhMR8GZSU8Xm+XDPN1Ju2XSlm9xg+/y3tLx3lH/ghTVFTLvMirdhMoNCx9PmUB1y/gtYu3eTaF5MPOVtYTI3fUwvhyYgD8BpQafB2wkixB9yQvHma2OZ/POdkyCB7eNKOXUyoT6SoSiOX1gEXPtuSL5BdsIwCdNqTB7C7XSCNywd30IcKEPjFLvuFA6fpJGe78/wCMIV6ZxZGMDlsY="
 
 before_install:
   - sudo apt-get update
