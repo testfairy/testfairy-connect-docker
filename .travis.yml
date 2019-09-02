@@ -4,12 +4,11 @@ services: docker
 
 env:
   # Docker hub crendentials ($DOCKER_USERNAME, $DOCKER_PASSWORD)
-  - secure: XXXXXXXXX
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install -y jq
-  - sudo apt-get install -y curl
+  - sudo apt-get install -y jq curl
 
 script:
-  - "./buildAndPublish.sh"
+  - ./build-and-publish.sh
+

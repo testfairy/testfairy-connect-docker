@@ -12,8 +12,6 @@ docker build . \
     -t $TAG \
     --build-arg version=$VERSION \
 
-# TODO : test if built image works
-
 # Don't push images if not a tagged github release, simply finalize CI
 echo "Current Tag: ${TRAVIS_TAG}"
 if [ -z "$TRAVIS_TAG" ];then
@@ -47,8 +45,3 @@ REPO_URL="https://hub.docker.com/v2/repositories/${NAME}/"
 RESPONSE_CODE=$(curl -s --write-out %{response_code} --output /dev/null -H "Authorization: JWT ${TOKEN}" -X PATCH --data-urlencode full_description@${README_FILEPATH} ${REPO_URL})
 echo "Received response code: ${RESPONSE_CODE}"
 
-# if [ $RESPONSE_CODE -eq 200 ]; then
-#   exit 0
-# else
-#   exit 1
-# fi
