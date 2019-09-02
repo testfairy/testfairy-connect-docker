@@ -7,5 +7,4 @@ RUN \
 
 WORKDIR /usr/src/testfairy-connect
 
-ENTRYPOINT ["node", "node_modules/testfairy-connect/service.js", "--foreground", "-f", "/etc/testfairy.json"]
-
+ENTRYPOINT ["node", "node_modules/testfairy-connect/service.js", "--foreground", "-f", "/etc/testfairy-connect/config.json"]

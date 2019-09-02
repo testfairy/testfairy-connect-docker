@@ -1,0 +1,14 @@
+dist: xenial
+language: bash
+services: docker
+
+env:
+  # Docker hub crendentials ($DOCKER_USERNAME, $DOCKER_PASSWORD)
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y jq curl
+
+script:
+  - ./build-and-publish.sh
+
