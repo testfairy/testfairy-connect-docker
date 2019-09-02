@@ -28,7 +28,7 @@ docker tag $IMAGE_ID "${NAME}:latest"
 echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 
 # Push each tag
-for T in $(sudo docker images vaidik/etcd --format "{{.Tag}}");
+for T in $(docker images ${NAME} --format "{{.Tag}}");
 do
     docker push "${NAME}:${T}"
 done
