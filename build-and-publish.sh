@@ -23,7 +23,7 @@ IMAGE_ID=$(docker images $TAG --format "{{.ID}}")
 docker tag $IMAGE_ID "${NAME}:latest"
 
 # Login to docker hub
-echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+docker login -u $DOCKER_USERNAME -p=$DOCKER_PASSWORD
 
 # Push each tag
 for T in $(docker images ${NAME} --format "{{.Tag}}");
